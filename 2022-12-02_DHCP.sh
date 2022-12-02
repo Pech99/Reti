@@ -5,7 +5,8 @@ configure
 terminal
 interface Fa4/0.10
 encapsulation dot1Q 10
-ip address 192.168.0.254 255.255.255.0
+ip address 192.168.1.254 255.255.255.0
+ip helper-address 192.168.1.253
 exit
 interface Fa4/0.11
 encapsulation dot1Q 11
@@ -42,6 +43,10 @@ switchport mode access
 switchport access vlan 11
 exit
 interface FastEthernet 3/1
+switchport mode access
+switchport access vlan 11
+exit
+interface FastEthernet 9/1
 switchport mode access
 switchport access vlan 11
 exit
