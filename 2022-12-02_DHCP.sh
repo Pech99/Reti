@@ -56,7 +56,7 @@ exit
 exit
 exit
 
-
+# Save
 enable
 write mem
 exit
