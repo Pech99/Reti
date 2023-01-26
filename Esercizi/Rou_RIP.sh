@@ -24,11 +24,13 @@ interface Fa5/0
 ip address 143.251.103.194 255.255.255.252
 no shutdown
 exit
-ip route 143.251.103.204 255.255.255.252 143.251.103.193
-ip route 143.251.103.208 255.255.255.252 143.251.103.202
-ip route 143.251.103.196 255.255.255.252 143.251.103.202
+router rip 
+network 143.251.103.212
+passive-interface Fa0/0
 exit
 exit
+exit
+
 
 #Router 1
 enable
@@ -45,11 +47,13 @@ interface Fa5/0
 ip address 143.251.103.202 255.255.255.252
 no shutdown
 exit
-ip route 143.251.103.212 255.255.255.252 143.251.103.201
-ip route 143.251.103.200 255.255.255.252 143.251.103.201
-ip route 143.251.103.204 255.255.255.252 143.251.103.198
+router rip 
+network 143.251.103.208
+passive-interface Fa0/0
 exit
 exit
+exit
+
 
 #Router 2
 enable
@@ -66,11 +70,13 @@ interface Fa5/0
 ip address 143.251.103.198 255.255.255.252
 no shutdown
 exit
-ip route 143.251.103.212 255.255.255.252 143.251.103.194
-ip route 143.251.103.200 255.255.255.252 143.251.103.197
-ip route 143.251.103.208 255.255.255.252 143.251.103.197
+router rip 
+network 143.251.103.204
+passive-interface Fa0/0
 exit
 exit
+exit
+
 
 
 # Save

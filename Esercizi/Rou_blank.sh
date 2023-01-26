@@ -13,7 +13,7 @@ Viola:	110|1 01|00 --> 143.251.103.212
 enable
 conf t
 interface Fa0/0
-ip address 143.251.103.206 255.255.255.252
+ip address 143.251.103.214 255.255.255.252
 no shutdown
 exit
 interface Fa4/0
@@ -49,7 +49,7 @@ exit
 enable
 conf t
 interface Fa0/0
-ip address 143.251.103.214 255.255.255.252
+ip address 143.251.103.206 255.255.255.252
 no shutdown
 exit
 interface Fa4/0
@@ -62,4 +62,3 @@ no shutdown
 exit
 exit
 exit
-
