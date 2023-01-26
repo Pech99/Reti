@@ -13,7 +13,7 @@ Viola:	110|1 01|00 --> 143.251.103.212
 enable
 conf t
 interface Fa0/0
-ip address 143.251.103.214 255.255.255.252
+ip address 143.251.103.206 255.255.255.252
 no shutdown
 exit
 interface Fa4/0
@@ -24,9 +24,6 @@ interface Fa5/0
 ip address 143.251.103.194 255.255.255.252
 no shutdown
 exit
-ip route 143.251.103.204 255.255.255.252 143.251.103.192
-ip route 143.251.103.208 255.255.255.252 143.251.103.200
-ip route 143.251.103.196 255.255.255.252 143.251.103.200
 exit
 exit
 
@@ -45,9 +42,6 @@ interface Fa5/0
 ip address 143.251.103.202 255.255.255.252
 no shutdown
 exit
-ip route 143.251.103.212 255.255.255.252 143.251.103.200
-ip route 143.251.103.200 255.255.255.252 143.251.103.200
-ip route 143.251.103.204 255.255.255.252 143.251.103.196
 exit
 exit
 
@@ -55,7 +49,7 @@ exit
 enable
 conf t
 interface Fa0/0
-ip address 143.251.103.206 255.255.255.252
+ip address 143.251.103.214 255.255.255.252
 no shutdown
 exit
 interface Fa4/0
@@ -66,9 +60,6 @@ interface Fa5/0
 ip address 143.251.103.198 255.255.255.252
 no shutdown
 exit
-ip route 143.251.103.212 255.255.255.252 143.251.103.196
-ip route 143.251.103.192 255.255.255.252 143.251.103.200
-ip route 143.251.103.208 255.255.255.252 143.251.103.196
 exit
 exit
 
