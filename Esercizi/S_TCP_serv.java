@@ -9,7 +9,7 @@ public class S_TCP_serv {
         ServerSocket sServ;
         Socket toCli;
 
-        byte[] buf = new byte[50];
+        byte[] buf = new byte[1000];
         int l;    
 
         // inizializzaizone della porta
@@ -28,15 +28,32 @@ public class S_TCP_serv {
 
             System.out.println("Listen on: "+sServ.getInetAddress()+":"+sServ.getLocalPort());
 
-            toCli = sServ.accept();
-            System.out.print("Connessione Stabilita");
-            System.out.println(" - da: "+toCli.getInetAddress()+":"+toCli.getLocalPort());
+            while (true){
+                toCli = sServ.accept();
+                System.out.print("Connessione Stabilita");
+                System.out.println(" - da: "+toCli.getInetAddress()+":"+toCli.getPort());
 
-            l = toCli.getInputStream().read(buf);
-            toCli.getOutputStream().write(buf, 0, l);
+                try {
+                    while (true){
+                        l = toCli.getInputStream().read(buf);
+                        if (buf[0]=='S'){
+                            toCli.getOutputStream().write(buf, 0, l);
+        
+                        } else if (buf[0]=='E'){
+                            break;
+                        }
+                    }
+        
+                    toCli.close();
+                    System.out.println("Connessione Chiusa");
+                    
+                } catch (Exception e) {
+                    System.out.println("Errore sulla Connessione");
 
-            toCli.close();
-            sServ.close();
+                }
+            }
+            
+            //sServ.close();
 
         } catch (Exception e) {
             System.out.println("ERRORE!!!");

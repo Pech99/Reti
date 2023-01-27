@@ -20,13 +20,23 @@ public class S_TCP_cli {
 
         try {
             sCli.connect( new InetSocketAddress(InetAddress.getLocalHost(), port));
-            System.out.print("Connect to: "+sCli.getLocalPort()+"\n");
+            System.out.print("Connect to: "+sCli.getInetAddress()+":"+sCli.getLocalPort()+"\n");
             
-            l = System.in.read(buf);
-            sCli.getOutputStream().write(buf, 0, l);
+            while (true){
+                l = System.in.read(buf, 1, buf.length-1);
 
-            l = sCli.getInputStream().read();
-            System.out.println(new String(buf, 0, l));
+                if (buf[1]=='.'){
+                    sCli.getOutputStream().write("E".getBytes(), 0, 1);
+                    break;
+                }
+
+                buf[0]='S';
+                sCli.getOutputStream().write(buf, 0, l);
+    
+                l = sCli.getInputStream().read(buf);
+                System.out.println(new String(buf, 1, l));
+
+            }
 
             sCli.close();
             
