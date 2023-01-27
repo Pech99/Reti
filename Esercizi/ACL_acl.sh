@@ -41,18 +41,25 @@ exit
 # R
 enable
 conf t
-ip access-list extended 100
+ip access-list extended 110
+permit IP 192.168.1.0 0.0.0.255 any
+permit TCP any any established
+exit
+ip access-list extended 111
+permit IP 192.168.0.0 0.0.0.255 any
+permit TCP any any established
 permit TCP any host 192.168.1.1 eq www
 exit
 interface Fa4/0.10
 encapsulation dot1Q 10
 ip address 192.168.0.254 255.255.255.0
-ip access-group 100 out
+ip access-group 110 out
 exit
 interface Fa4/0.11
 encapsulation dot1Q 11
 ip address 192.168.1.254 255.255.255.0
 ip helper-address 192.168.0.1
+ip access-group 111 out
 exit
 interface Fa4/0
 no shutdown
@@ -63,6 +70,7 @@ no shutdown
 exit
 exit
 exit
+
 
 # save
 enable

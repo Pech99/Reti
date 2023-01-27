@@ -38,28 +38,43 @@ exit
 exit
 exit
 
+
+enable
+write mem
+exit
+exit
+
+
 # R
 enable
 conf t
 interface Fa4/0.10
 encapsulation dot1Q 10
 ip address 192.168.0.254 255.255.255.0
+ip nat inside
 exit
 interface Fa4/0.11
 encapsulation dot1Q 11
 ip address 192.168.1.254 255.255.255.0
 ip helper-address 192.168.0.1
+ip nat inside
 exit
 interface Fa4/0
 no shutdown
 exit
 interface Fa5/0
 ip address 10.0.0.10 255.0.0.0
+ip nat outside
 no shutdown
 exit
+access-list 100 permit ip any any
+ip nat inside source list 100 interface Fa5/0
 exit
 exit
 
+ip access-list extended 100
+permit ip any any
+exit
 
 # save
 enable
