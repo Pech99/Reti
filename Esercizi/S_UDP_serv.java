@@ -25,13 +25,12 @@ public class S_UDP_serv {
             while(true){
                 try {
                     sock.receive(dp);
-
                     if (dp.getData()[0]=='.'){
                         break; 
                     }
-
                     System.out.println("req from:"+dp.getAddress()+":"+dp.getPort()+"\n");
                     sock.send(dp);
+                    
                 } catch (Exception e) {
                     System.out.println("Errore connessione: "+e.getMessage());
                 }

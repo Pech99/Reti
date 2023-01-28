@@ -54,7 +54,7 @@ public class S_TCP_cli {
                 sCli.getOutputStream().write(buf, 0, l);
     
                 l = sCli.getInputStream().read(buf);
-                System.out.println("> "+new String(buf, 1, l));
+                System.out.println("> "+new String(buf, 1, l-1));
 
             }
 

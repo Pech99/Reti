@@ -9,7 +9,7 @@
             "name": "Launch Current File Cli",
             "request": "launch",
             "mainClass": "${file}",
-            "args": "5868"
+            "args": "p10742"
         },
         {
             "type": "java",
