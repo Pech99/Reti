@@ -9,17 +9,37 @@ public class S_TCP_cli {
         byte[] buf = new byte[1000];
         int l;
 
-        int port = 0;
-        if(args.length==1){
-            try {
-                port = Integer.parseInt(args[0]);
-            } catch (Exception e) {
-                port = 0;
+
+        int port = -1;
+        String addr = "";
+
+        for (String s : args) {
+            if (s.charAt(0)=='p'){
+                try {
+                    port = Integer.parseInt(s.substring(1));
+                } catch (Exception e) {
+                    System.out.println("Porta non valida");
+                    return;
+                }
+            } else if (s.charAt(0)=='a'){
+                addr = s.substring(1);
+            } else {
+                System.out.println("Argomenti non validi");
+                return;
             }
         }
 
+        if(port==-1){
+            System.out.println("Inserire almeno una porta valida");
+        }
+
         try {
-            sCli.connect( new InetSocketAddress(InetAddress.getLocalHost(), port));
+            if (addr == "" ){
+                sCli.connect( new InetSocketAddress(InetAddress.getLocalHost(), port));
+            } else {
+                sCli.connect( new InetSocketAddress(InetAddress.getByName(addr), port));
+            }
+
             System.out.print("Connect to: "+sCli.getInetAddress()+":"+sCli.getLocalPort()+"\n");
             
             while (true){
@@ -34,7 +54,7 @@ public class S_TCP_cli {
                 sCli.getOutputStream().write(buf, 0, l);
     
                 l = sCli.getInputStream().read(buf);
-                System.out.println(new String(buf, 1, l));
+                System.out.println("> "+new String(buf, 1, l));
 
             }
 

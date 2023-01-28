@@ -14,10 +14,11 @@ public class S_TCP_serv {
 
         // inizializzaizone della porta
         int port = 0;
-        if(args.length==1){
+        if(args.length==1 && args[0].charAt(0)=='p'){
             try {
-                port = Integer.parseInt(args[0]);
+                port = Integer.parseInt(args[0].substring(1));
             } catch (Exception e) {
+                System.out.println("Porta non valida");
                 port = 0;
             }
         }
