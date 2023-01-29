@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch S_TCP_serv_mt",
+            "request": "launch",
+            "mainClass": "S_TCP_serv_mt",
+            "projectName": "Reti_a1898d68"
+        },
+        {
+            "type": "java",
             "name": "Launch Current File Cli",
             "request": "launch",
             "mainClass": "${file}",
