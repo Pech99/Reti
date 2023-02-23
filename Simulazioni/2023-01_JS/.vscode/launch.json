@@ -1,0 +1,35 @@
+{
+    // Usare IntelliSense per informazioni sui possibili attributi.
+    // Al passaggio del mouse vengono visualizzate le descrizioni degli attributi esistenti.
+    // Per altre informazioni, visitare: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Client",
+            "request": "launch",
+            "mainClass": "${file}",
+            "args": "p50577"
+        },
+        {
+            "type": "java",
+            "name": "Server",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch TSS",
+            "request": "launch",
+            "mainClass": "TSS",
+            "projectName": "2023-01_JS_5eeb82c7"
+        },
+        {
+            "type": "java",
+            "name": "Launch ricercatore",
+            "request": "launch",
+            "mainClass": "ricercatore",
+            "projectName": "2023-01_JS_5eeb82c7"
+        }
+    ]
+}
