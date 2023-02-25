@@ -80,14 +80,14 @@ public class server {
     private static frame recive() throws IOException, ClassNotFoundException {
         ObjectInputStream in = new ObjectInputStream(toCli.getInputStream());
         frame f = (frame) in.readObject();
-        System.out.println(toCli.getInetAddress()+":"+toCli.getPort()+" <- "+f);
+        System.out.println(toCli.getInetAddress()+":"+toCli.getPort()+" -> "+f);
         return f;
     }
 
     private static void send(frame f) throws IOException {
         ObjectOutputStream out = new ObjectOutputStream(toCli.getOutputStream());
         out.writeObject(f);
-        System.out.println(toCli.getInetAddress()+":"+toCli.getPort()+" -> "+f);
+        System.out.println(toCli.getInetAddress()+":"+toCli.getPort()+" <- "+f);
     }
 
     private static ArrayList<String> getFigure() {
