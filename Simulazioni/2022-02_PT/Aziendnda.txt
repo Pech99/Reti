@@ -1,0 +1,120 @@
+
+BaseAddres:	* 84.0.0.0/8
+BroadCast:	* 84.255.255.255
+Getaway:	* 84.255.255.254
+Primo IP:	* 84.0.0.1
+Ultimo IP:	* 84.255.255.253
+Net Mask:	* 255.0.0.0
+Wildcard:	* 0.255.255.255
+
+9	--> x.x.x.x/9
+BaseAddres:	* 84.0.0.0/9
+BroadCast:	* 84.127.255.255
+Getaway:	* 84.127.255.254
+Primo IP:	* 84.0.0.1
+Ultimo IP:	* 84.127.255.253
+Net Mask:	* 255.128.0.0
+Wildcard:	* 0.127.255.255
+
+#4	--> x.x.x.x/30
+BaseAddres:	* 84.128.0.0/30
+BroadCast:	* 84.128.0.3
+Getaway:	-
+Primo IP:	* 84.128.0.1
+Secondo IP:	* 84.128.0.2
+Net Mask:	* 255.255.255.252
+Wildcard:	* 0.0.0.3
+
+
+---------------------------
+
+
+BaseAddres:	* 197.104.0.0/23
+BroadCast:	* 197.104.1.255
+Getaway:	* 197.104.1.254
+Primo IP:	* 197.104.0.1
+Ultimo IP:	* 197.104.1.253
+Net Mask:	* 255.255.254.0
+Wildcard:	* 0.0.1.255
+
+#32	--> x.x.x.x/27
+BaseAddres:	* 197.104.0.0/27
+BroadCast:	* 197.104.0.31
+Getaway:	* 197.104.0.30
+Primo IP:	* 197.104.0.1
+Ultimo IP:	* 197.104.0.29
+Net Mask:	* 255.255.255.224
+Wildcard:	* 0.0.0.31
+
+#32	--> x.x.x.x/27
+BaseAddres:	* 197.104.0.32/27
+BroadCast:	* 197.104.0.63
+Getaway:	* 197.104.0.62
+Primo IP:	* 197.104.0.33
+Ultimo IP:	* 197.104.0.61
+Net Mask:	* 255.255.255.224
+Wildcard:	* 0.0.0.31
+
+#16	--> x.x.x.x/28
+BaseAddres:	* 197.104.0.64/28
+BroadCast:	* 197.104.0.79
+Getaway:	* 197.104.0.78
+Primo IP:	* 197.104.0.65
+Ultimo IP:	* 197.104.0.77
+Net Mask:	* 255.255.255.240
+Wildcard:	* 0.0.0.15
+
+#128	--> x.x.x.x/25
+BaseAddres:	* 197.104.0.128/25
+BroadCast:	* 197.104.0.255
+Getaway:	* 197.104.0.254
+Primo IP:	* 197.104.0.129
+Ultimo IP:	* 197.104.0.253
+Net Mask:	* 255.255.255.128
+Wildcard:	* 0.0.0.127
+
+#128	--> x.x.x.x/25
+BaseAddres:	* 197.104.1.0/25
+BroadCast:	* 197.104.1.127
+Getaway:	* 197.104.1.126
+Primo IP:	* 197.104.1.1
+Ultimo IP:	* 197.104.1.125
+Net Mask:	* 255.255.255.128
+Wildcard:	* 0.0.0.127
+
+#4	--> x.x.x.x/30
+BaseAddres:	* 197.104.0.80/30
+BroadCast:	* 197.104.0.83
+Getaway:	-
+Primo IP:	* 197.104.0.81
+Secondo IP:	* 197.104.0.82
+Net Mask:	* 255.255.255.252
+Wildcard:	* 0.0.0.3
+
+#4	--> x.x.x.x/30
+BaseAddres:	* 197.104.0.84/30
+BroadCast:	* 197.104.0.87
+Getaway:	-
+Primo IP:	* 197.104.0.85
+Secondo IP:	* 197.104.0.86
+Net Mask:	* 255.255.255.252
+Wildcard:	* 0.0.0.3
+
+#4	--> x.x.x.x/30
+BaseAddres:	* 197.104.0.88/30
+BroadCast:	* 197.104.0.91
+Getaway:	-
+Primo IP:	* 197.104.0.89
+Secondo IP:	* 197.104.0.90
+Net Mask:	* 255.255.255.252
+Wildcard:	* 0.0.0.3
+
+#4	--> x.x.x.x/30
+BaseAddres:	* 197.104.0.92/30
+BroadCast:	* 197.104.0.95
+Getaway:	-
+Primo IP:	* 197.104.0.93
+Secondo IP:	* 197.104.0.94
+Net Mask:	* 255.255.255.252
+Wildcard:	* 0.0.0.3
+
