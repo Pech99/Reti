@@ -2,7 +2,7 @@
 Questo repository contiene delle proposte di soluzione ai temi d'esame del laboratorio del corso di Reti di Calcolatori.
 
 ## PackeTracer
-I file <code>.pkt</code> contengono il modello della rete in Packet Tracer, i file <code>.sh</code>, se presenti, i comandi lanciati su ogni dispositivo configurato. La parte di calcoli è possibile controllarla <a href="https://github.com/Pech99/Conv_2.0">qui</a>.
+I file <code>.pkt</code> contengono il modello della rete in Packet Tracer, i file <code>.sh</code>, se presenti, i comandi lanciati su ogni dispositivo configurato. <a href="https://github.com/Pech99/Conv_2.0">Controllo calcoli</a>.
 ## Java Socket
 La maggior parte delle soluzioni utilizza l'interfaccia <code>Serializable</code> per la conversione della frame in <code>byte[]</code>.
 
